@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+    background-image: url("scenery-1209204.jpg");
+}
+</style>
+    <h2>
+            <img src="pasek.png" style="position: fixed; right: 0px; top: -75px">
+        </h2>
+        <h1 style="position: fixed; right: 1145px; top: -29px; font-size:100%; font-size: 250%;">10</h1>
+        <h3 style="position: fixed; right: 1005px; top: -42px; font-size:100%; font-size: 250%;">50</h3>
+        <h4 style="position: fixed; right: 830px; top: -55px; font-size:100%; font-size: 250%;">25</h4>
+        <h5 style="position: fixed; right: 697px; top: -69px; font-size:100%; font-size: 250%;"></h5>
+
+</head>
+<body>
+    <div>
+    <img src="land.png" style="position: fixed; left: 0px; top: 415px;" onclick='podmiana1()'>
+    <img src="land1.png" style="position: fixed; left: 0px; top: 800px" onclick='podmiana2()'>
+    <img src="land2.png" style="position: fixed; right: 500px; top: 700px" onclick='podmiana3()'>
+    <img src="land3.png" style="position: fixed; left: 500px; top: 400px" onclick='podmiana4()'>
+    <img src="land4.png" style="position: fixed; right: 0px; top: 600px" onclick='podmiana5()'>
+    <img src="log.png" style="position: fixed; left: 530px; top: 750px">
+    <img src="chlog.png" style="position: fixed; right: 80px; top: 430px">
+    <img src="cabin.png" style="position: fixed; right: 500px; top: 900px">
+    </div>
+</body>
+<script>
+
+const build1 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam()"></div>'
+
+const build2 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw2()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop2()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos2()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl2()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom2()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam2()"></div>'
+
+const build3 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw3()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop3()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos3()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl3()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom3()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam3()"></div>'
+
+const build4 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw4()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop4()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos4()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl4()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom4()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam4()"></div>'
+
+const build5 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw5()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop5()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos5()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl5()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom5()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam5()"></div>'
+
+a1 = '<img src="land.png" style="position: fixed; left: 0px; top: 415px;" onclick="podmiana1()">'
+
+function podmiana1(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build1
+
+}
+
+a2 = '<img src="land1.png" style="position: fixed; left: 0px; top: 800px" onclick="podmiana2()">'
+
+function podmiana2(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build2
+
+}
+
+a3 = '  <img src="land2.png" style="position: fixed; right: 500px; top: 700px" onclick="podmiana3()">'
+
+function podmiana3(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+console.log(3)
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build3
+
+}
+
+a4 = '<img src="land3.png" style="position: fixed; left: 500px; top: 400px" onclick="podmiana4()">'
+
+function podmiana4(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+console.log(4)
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build4
+
+}
+
+a5 = '<img src="land4.png" style="position: fixed; right: 0px; top: 600px" onclick="podmiana5()">'
+
+function podmiana5(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+console.log(5)
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build5
+
+}
+
+function arrow(){
+
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("scenery-1209204.jpg");}'
+
+const vers = document.querySelector('div')
+
+vers.outerHTML ='<div><img src="log.png" style="position: fixed; left: 530px; top: 750px"><img src="chlog.png" style="position: fixed; right: 80px; top: 430px"><img src="cabin.png" style="position: fixed; right: 500px; top: 900px">' + a1 + a2 + a3 + a4 + a5 + '</div>'
+
+}
+
+function dom(){
+
+a1 = '<img src="log.png" style="position: fixed; left: 0px; top: 415px;">'
+
+}
+function drw(){
+
+a1 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 415px;">'
+
+}
+function kos(){
+
+a1 = '<img src="church.png" style="position: fixed; left: 0px; top: 415px;">'
+
+}
+function chl(){
+
+a1 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 415px;">'
+
+}
+function kop(){
+
+a1 = '<img src="iron.png" style="position: fixed; left: 0px; top: 415px;">'
+
+}
+function kam(){
+
+a1 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 415px">'
+
+}
+
+function dom2(){
+
+a2 = '<img src="log.png" style="position: fixed; left: 0px; top: 800px;">'
+
+}
+function drw2(){
+
+a2 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 800px;">'
+
+}
+function kos2(){
+
+a2 = '<img src="church.png" style="position: fixed; left: 0px; top: 800px;">'
+
+}
+function chl2(){
+
+a2 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 800px;">'
+
+}
+function kop2(){
+
+a2 = '<img src="iron.png" style="position: fixed; left: 0px; top: 800px;">'
+
+}
+function kam2(){
+
+a2 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 800px">'
+
+}
+
+function dom3(){
+
+a3 = '<img src="log.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+function drw3(){
+
+a3 = '<img src="cabin.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+function kos3(){
+
+a3 = '<img src="church.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+function chl3(){
+
+a3 = '<img src="hunter.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+function kop3(){
+
+a3 = '<img src="iron.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+function kam3(){
+
+a3 = '<img src="quarry.png" style="position: fixed; right: 500px; top: 700px">'
+
+}
+
+function dom4(){
+
+a4 = '<img src="log.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+function drw4(){
+
+a4 = '<img src="cabin.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+function kos4(){
+
+a4 = '<img src="church.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+function chl4(){
+
+a4 = '<img src="hunter.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+function kop4(){
+
+a4 = '<img src="iron.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+function kam4(){
+
+a4 = '<img src="quarry.png" style="position: fixed; left: 500px; top: 400px">'
+
+}
+
+function dom5(){
+
+a5 = '<img src="log.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+function drw5(){
+
+a5 = '<img src="cabin.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+function kos5(){
+
+a5 = '<img src="church.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+function chl5(){
+
+a5 = '<img src="hunter.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+function kop5(){
+
+a5 = '<img src="iron.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+function kam5(){
+
+a5 = '<img src="quarry.png" style="position: fixed; right: 0px; top: 600px">'
+
+}
+
+</script>
+</html>
