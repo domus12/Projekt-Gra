@@ -26,6 +26,7 @@ body  {
     <img src="chlog.png" style="position: fixed; right: 80px; top: 430px">
     <img src="cabin.png" style="position: fixed; right: 500px; top: 900px">
     </div>
+    <embed src="muzyka.mp3" loop="false" hidden="true" autostart="true">
 </body>
 <script>
 
@@ -38,6 +39,46 @@ const build3 = '<div><img src="arrow.png" style="position: fixed; right: 50px; t
 const build4 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw4()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop4()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos4()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl4()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom4()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam4()"></div>'
 
 const build5 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw5()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop5()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos5()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl5()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom5()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam5()"></div>'
+
+g = 1
+
+w = 3.67
+
+s = 1
+
+i = 0
+
+    gold = document.querySelector('h1').innerHTML
+
+gold = parseInt(gold)
+
+setInterval(function(){ gold += g }, 4000)
+
+setInterval(function(){ document.querySelector('h1').innerHTML = Math.round(gold) }, 000)
+
+    wood = document.querySelector('h3').innerHTML
+
+wood = parseInt(wood)
+
+setInterval(function(){ wood += w  }, 4000)
+
+setInterval(function(){ document.querySelector('h3').innerHTML = Math.round(wood) }, 000)
+
+    stone = document.querySelector('h4').innerHTML
+
+stone = parseInt(stone)
+
+setInterval(function(){ stone += s }, 20000)
+
+setInterval(function(){ document.querySelector('h4').innerHTML = Math.round(stone) }, 000)
+
+    iron = document.querySelector('h5').innerHTML
+
+iron = parseInt(iron)
+
+setInterval(function(){ iron += i }, 1000)
+
+setInterval(function(){ document.querySelector('h5').innerHTML = Math.round(iron) }, 000)
 
 a1 = '<img src="land.png" style="position: fixed; left: 0px; top: 415px;" onclick="podmiana1()">'
 
@@ -69,8 +110,6 @@ function podmiana3(){
 const back = document.querySelector("style")
 back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
 
-console.log(3)
-
 const vers = document.querySelector('div')
 
 vers.outerHTML = build3
@@ -83,8 +122,6 @@ function podmiana4(){
 const back = document.querySelector("style")
 back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
 
-console.log(4)
-
 const vers = document.querySelector('div')
 
 vers.outerHTML = build4
@@ -96,8 +133,6 @@ a5 = '<img src="land4.png" style="position: fixed; right: 0px; top: 600px" oncli
 function podmiana5(){
 const back = document.querySelector("style")
 back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
-
-console.log(5)
 
 const vers = document.querySelector('div')
 
@@ -118,157 +153,327 @@ vers.outerHTML ='<div><img src="log.png" style="position: fixed; left: 530px; to
 
 function dom(){
 
-a1 = '<img src="log.png" style="position: fixed; left: 0px; top: 415px;">'
+if (wood >= 50){
 
+a1 = '<img src="log.png" style="position: fixed; left: 0px; top: 415px;">'
+g += 1.33
+wood -= 50
+
+}
 }
 function drw(){
 
-a1 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 415px;">'
+if (wood >= 50 && stone >= 10){
 
+a1 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 415px;">'
+w += 16.7
+wood -= 50
+stone -= 10
+
+}
 }
 function kos(){
 
-a1 = '<img src="church.png" style="position: fixed; left: 0px; top: 415px;">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a1 = '<img src="church.png" style="position: fixed; left: 0px; top: 415px;">'
+wood -= 100
+stone -= 50
+gold -= 100
+}
 }
 function chl(){
 
-a1 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 415px;">'
+if (wood >= 75){
 
+a1 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 415px;">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 75
+}
 }
 function kop(){
 
+if (wood >= 100 && stone >= 50 && gold >= 100){
+
 a1 = '<img src="iron.png" style="position: fixed; left: 0px; top: 415px;">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+}
 
 }
 function kam(){
 
-a1 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 415px">'
+if (wood >= 100 && gold >= 50){
 
+a1 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 415px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+}
 }
 
 function dom2(){
+    if (wood >= 50){
 
 a2 = '<img src="log.png" style="position: fixed; left: 0px; top: 800px;">'
+g += 1.33
+wood -= 50
 
+}
 }
 function drw2(){
 
-a2 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 800px;">'
+if (wood >= 50 && stone >= 10){
 
+a2 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 800px;">'
+w += 16.7
+wood -= 50
+stone -= 10
+}
 }
 function kos2(){
 
+if (wood >= 100 && stone >= 50 && gold >= 100){
+
 a2 = '<img src="church.png" style="position: fixed; left: 0px; top: 800px;">'
+wood -= 100
+stone -= 50
+gold -= 100
+}
 
 }
 function chl2(){
 
-a2 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 800px;">'
+if (wood >= 75){
 
+a2 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 800px;">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 75
+}
 }
 function kop2(){
 
+if (wood >= 100 && stone >= 50 && gold >= 100){
+
 a2 = '<img src="iron.png" style="position: fixed; left: 0px; top: 800px;">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+}
 
 }
 function kam2(){
 
-a2 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 800px">'
+if (wood >= 100 && gold >= 50){
 
+a2 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 800px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+}
 }
 
 function dom3(){
+    if (wood >= 50){
 
 a3 = '<img src="log.png" style="position: fixed; right: 500px; top: 700px">'
-
+g += 1.33
+wood -= 50
+}
 }
 function drw3(){
 
-a3 = '<img src="cabin.png" style="position: fixed; right: 500px; top: 700px">'
+if (wood >= 50 && stone >= 10){
 
+a3 = '<img src="cabin.png" style="position: fixed; right: 500px; top: 700px">'
+w += 16.7
+wood -= 50
+stone -= 10
+}
 }
 function kos3(){
 
-a3 = '<img src="church.png" style="position: fixed; right: 500px; top: 700px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a3 = '<img src="church.png" style="position: fixed; right: 500px; top: 700px">'
+wood -= 100
+stone -= 50
+gold -= 100
+}
 }
 function chl3(){
 
-a3 = '<img src="hunter.png" style="position: fixed; right: 500px; top: 700px">'
+if (wood >= 75){
 
+a3 = '<img src="hunter.png" style="position: fixed; right: 500px; top: 700px">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 75
+}
 }
 function kop3(){
 
-a3 = '<img src="iron.png" style="position: fixed; right: 500px; top: 700px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a3 = '<img src="iron.png" style="position: fixed; right: 500px; top: 700px">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+}
 }
 function kam3(){
 
-a3 = '<img src="quarry.png" style="position: fixed; right: 500px; top: 700px">'
+if (wood >= 100 && gold >= 50){
 
+a3 = '<img src="quarry.png" style="position: fixed; right: 500px; top: 700px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+}
 }
 
 function dom4(){
 
-a4 = '<img src="log.png" style="position: fixed; left: 500px; top: 400px">'
+    if (wood >= 50){
 
+a4 = '<img src="log.png" style="position: fixed; left: 500px; top: 400px">'
+g += 1.33
+wood -= 50
+}
 }
 function drw4(){
 
-a4 = '<img src="cabin.png" style="position: fixed; left: 500px; top: 400px">'
+if (wood >= 50 && stone >= 10){
 
+a4 = '<img src="cabin.png" style="position: fixed; left: 500px; top: 400px">'
+w += 16.7
+wood -= 50
+stone -= 10
+}
 }
 function kos4(){
 
-a4 = '<img src="church.png" style="position: fixed; left: 500px; top: 400px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a4 = '<img src="church.png" style="position: fixed; left: 500px; top: 400px">'
+wood -= 100
+stone -= 50
+gold -= 100
+}
 }
 function chl4(){
 
-a4 = '<img src="hunter.png" style="position: fixed; left: 500px; top: 400px">'
+if (wood >= 75){
 
+a4 = '<img src="hunter.png" style="position: fixed; left: 500px; top: 400px">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 75
+}
 }
 function kop4(){
 
-a4 = '<img src="iron.png" style="position: fixed; left: 500px; top: 400px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a4 = '<img src="iron.png" style="position: fixed; left: 500px; top: 400px">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+}
 }
 function kam4(){
 
-a4 = '<img src="quarry.png" style="position: fixed; left: 500px; top: 400px">'
+if (wood >= 100 && gold >= 50){
 
+a4 = '<img src="quarry.png" style="position: fixed; left: 500px; top: 400px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+}
 }
 
 function dom5(){
 
-a5 = '<img src="log.png" style="position: fixed; right: 0px; top: 600px">'
+    if (wood >= 50){
 
+a5 = '<img src="log.png" style="position: fixed; right: 0px; top: 600px">'
+g += 1.33
+wood -= 50
+}
 }
 function drw5(){
 
+if (wood >= 50 && stone >= 10){
+
 a5 = '<img src="cabin.png" style="position: fixed; right: 0px; top: 600px">'
+w += 16.7
+wood -= 50
+stone -= 10
+}
 
 }
 function kos5(){
 
-a5 = '<img src="church.png" style="position: fixed; right: 0px; top: 600px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a5 = '<img src="church.png" style="position: fixed; right: 0px; top: 600px">'
+wood -= 100
+stone -= 50
+gold -= 100
+}
 }
 function chl5(){
 
-a5 = '<img src="hunter.png" style="position: fixed; right: 0px; top: 600px">'
+if (wood >= 75){
 
+a5 = '<img src="hunter.png" style="position: fixed; right: 0px; top: 600px">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 75
+}
 }
 function kop5(){
 
-a5 = '<img src="iron.png" style="position: fixed; right: 0px; top: 600px">'
+if (wood >= 100 && stone >= 50 && gold >= 100){
 
+a5 = '<img src="iron.png" style="position: fixed; right: 0px; top: 600px">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+}
 }
 function kam5(){
 
-a5 = '<img src="quarry.png" style="position: fixed; right: 0px; top: 600px">'
+if (wood >= 100 && gold >= 50){
 
+a5 = '<img src="quarry.png" style="position: fixed; right: 0px; top: 600px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+}
 }
 
 </script>
