@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body  {
+
+body {
+    width: 98%;
+    height: 100%;
     background-image: url("scenery-1209204.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+    img {    
+    width: 16%;
+    height: auto;
+    }
+
 </style>
     <h2>
             <img src="pasek.png" style="position: fixed; right: 0px; top: -75px">
@@ -18,10 +30,11 @@ body  {
 <body>
     <div>
     <img src="land.png" style="position: fixed; left: 0px; top: 415px;" onclick='podmiana1()'>
-    <img src="land1.png" style="position: fixed; left: 0px; top: 800px" onclick='podmiana2()'>
-    <img src="land2.png" style="position: fixed; right: 500px; top: 700px" onclick='podmiana3()'>
-    <img src="land3.png" style="position: fixed; left: 500px; top: 400px" onclick='podmiana4()'>
-    <img src="land4.png" style="position: fixed; right: 0px; top: 600px" onclick='podmiana5()'>
+    <img src="land.png" style="position: fixed; left: 0px; top: 800px" onclick='podmiana2()'>
+    <img src="land.png" style="position: fixed; right: 500px; top: 700px" onclick='podmiana3()'>
+    <img src="land.png" style="position: fixed; left: 500px; top: 400px" onclick='podmiana4()'>
+    <img src="land.png" style="position: fixed; right: 0px; top: 600px" onclick='podmiana5()'>
+    <img src="land.png" style="position: fixed; right: 410px; top: 521px" onclick='podmiana6()'>
     <img src="log.png" style="position: fixed; left: 530px; top: 750px">
     <img src="chlog.png" style="position: fixed; right: 80px; top: 430px">
     <img src="cabin.png" style="position: fixed; right: 500px; top: 900px">
@@ -39,6 +52,10 @@ const build3 = '<div><img src="arrow.png" style="position: fixed; right: 50px; t
 const build4 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw4()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop4()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos4()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl4()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom4()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam4()"></div>'
 
 const build5 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw5()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop5()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos5()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl5()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom5()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam5()"></div>'
+
+const build6 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"><img src="add.png" style="position: fixed; left: 360px; top: 450px;" onclick="drw6()"><img src="add.png" style="position: fixed; left: 90px; top: 880px;" onclick="kop6()"><img src="add.png" style="position: fixed; left: 840px; top: 510px;" onclick="kos6()"><img src="add.png" style="position: fixed; right: 530px; top: 496px;" onclick="chl6()"><img src="add.png" style="position: fixed; right: 70px; top: 480px;" onclick="dom6()"><img src="add.png" style="position: fixed; right: 100px; top: 840px;" onclick="kam6()"></div>'
+
+const buildch1 = '<div><img src="arrow.png" style="position: fixed; right: 50px; top: 40px;" onclick="arrow()"></div>'
 
 g = 1
 
@@ -84,7 +101,7 @@ a1 = '<img src="land.png" style="position: fixed; left: 0px; top: 415px;" onclic
 
 function podmiana1(){
 const back = document.querySelector("style")
-back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
 
 const vers = document.querySelector('div')
 
@@ -92,11 +109,11 @@ vers.outerHTML = build1
 
 }
 
-a2 = '<img src="land1.png" style="position: fixed; left: 0px; top: 800px" onclick="podmiana2()">'
+a2 = '<img src="land.png" style="position: fixed; left: 0px; top: 800px" onclick="podmiana2()">'
 
 function podmiana2(){
 const back = document.querySelector("style")
-back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
 
 const vers = document.querySelector('div')
 
@@ -104,11 +121,11 @@ vers.outerHTML = build2
 
 }
 
-a3 = '  <img src="land2.png" style="position: fixed; right: 500px; top: 700px" onclick="podmiana3()">'
+a3 = '  <img src="land.png" style="position: fixed; right: 500px; top: 700px" onclick="podmiana3()">'
 
 function podmiana3(){
 const back = document.querySelector("style")
-back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
 
 const vers = document.querySelector('div')
 
@@ -116,11 +133,11 @@ vers.outerHTML = build3
 
 }
 
-a4 = '<img src="land3.png" style="position: fixed; left: 500px; top: 400px" onclick="podmiana4()">'
+a4 = '<img src="land.png" style="position: fixed; left: 500px; top: 400px" onclick="podmiana4()">'
 
 function podmiana4(){
 const back = document.querySelector("style")
-back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
 
 const vers = document.querySelector('div')
 
@@ -128,15 +145,27 @@ vers.outerHTML = build4
 
 }
 
-a5 = '<img src="land4.png" style="position: fixed; right: 0px; top: 600px" onclick="podmiana5()">'
+a5 = '<img src="land.png" style="position: fixed; right: 0px; top: 600px" onclick="podmiana5()">'
 
 function podmiana5(){
 const back = document.querySelector("style")
-back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
 
 const vers = document.querySelector('div')
 
 vers.outerHTML = build5
+
+}
+
+a6 = '<img src="land.png" style="position: fixed; right: 410px; top: 521px" onclick="podmiana6()">'
+
+function podmiana6(){
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  width: 98%; height: 100%; background-repeat: no-repeat; background-size: cover;}'
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = build6
 
 }
 
@@ -147,7 +176,7 @@ back.innerHTML= 'body  {background-image: url("scenery-1209204.jpg");}'
 
 const vers = document.querySelector('div')
 
-vers.outerHTML ='<div><img src="log.png" style="position: fixed; left: 530px; top: 750px"><img src="chlog.png" style="position: fixed; right: 80px; top: 430px"><img src="cabin.png" style="position: fixed; right: 500px; top: 900px">' + a1 + a2 + a3 + a4 + a5 + '</div>'
+vers.outerHTML ='<div><img src="log.png" style="position: fixed; left: 530px; top: 750px"><img src="chlog.png" style="position: fixed; right: 80px; top: 430px"><img src="cabin.png" style="position: fixed; right: 500px; top: 900px">' + a1 + a2 + a3 + a4 + a5 + a6 + '</div>'
 
 }
 
@@ -158,6 +187,8 @@ if (wood >= 50){
 a1 = '<img src="log.png" style="position: fixed; left: 0px; top: 415px;">'
 g += 1.33
 wood -= 50
+
+arrow()
 
 }
 }
@@ -170,28 +201,36 @@ w += 16.7
 wood -= 50
 stone -= 10
 
+arrow()
+
 }
 }
 function kos(){
 
 if (wood >= 100 && stone >= 50 && gold >= 100){
 
-a1 = '<img src="church.png" style="position: fixed; left: 0px; top: 415px;">'
+a1 = '<img src="church.png" style="position: fixed; left: 0px; top: 415px;" onclick="ch1()">'
 wood -= 100
 stone -= 50
 gold -= 100
+
+arrow()
+
 }
 }
 function chl(){
 
-if (wood >= 75){
+if (wood >= 50){
 
 a1 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 415px;">'
 g += (0.1*g)
 w += (0.1*w)
 s += (0.1*s)
 i += (0.1*i)
-wood -= 75
+wood -= 50
+
+arrow()
+
 }
 }
 function kop(){
@@ -203,8 +242,10 @@ i += 0.17
 wood -= 50
 stone -= 50
 gold -= 50
-}
 
+arrow()
+
+}
 }
 function kam(){
 
@@ -214,6 +255,8 @@ a1 = '<img src="quarry.png" style="position: fixed; left: 0px; top: 415px">'
 s += 8.33
 wood -= 100
 gold -= 50
+
+arrow()
 
 }
 }
@@ -225,6 +268,8 @@ a2 = '<img src="log.png" style="position: fixed; left: 0px; top: 800px;">'
 g += 1.33
 wood -= 50
 
+arrow()
+
 }
 }
 function drw2(){
@@ -235,6 +280,9 @@ a2 = '<img src="cabin.png" style="position: fixed; left: 0px; top: 800px;">'
 w += 16.7
 wood -= 50
 stone -= 10
+
+arrow()
+
 }
 }
 function kos2(){
@@ -245,19 +293,24 @@ a2 = '<img src="church.png" style="position: fixed; left: 0px; top: 800px;">'
 wood -= 100
 stone -= 50
 gold -= 100
-}
 
+arrow()
+
+}
 }
 function chl2(){
 
-if (wood >= 75){
+if (wood >= 50){
 
 a2 = '<img src="hunter.png" style="position: fixed; left: 0px; top: 800px;">'
 g += (0.1*g)
 w += (0.1*w)
 s += (0.1*s)
 i += (0.1*i)
-wood -= 75
+wood -= 50
+
+arrow()
+
 }
 }
 function kop2(){
@@ -269,8 +322,10 @@ i += 0.17
 wood -= 50
 stone -= 50
 gold -= 50
-}
 
+arrow()
+
+}
 }
 function kam2(){
 
@@ -281,6 +336,8 @@ s += 8.33
 wood -= 100
 gold -= 50
 
+arrow()
+
 }
 }
 
@@ -290,6 +347,9 @@ function dom3(){
 a3 = '<img src="log.png" style="position: fixed; right: 500px; top: 700px">'
 g += 1.33
 wood -= 50
+
+arrow()
+
 }
 }
 function drw3(){
@@ -300,6 +360,9 @@ a3 = '<img src="cabin.png" style="position: fixed; right: 500px; top: 700px">'
 w += 16.7
 wood -= 50
 stone -= 10
+
+arrow()
+
 }
 }
 function kos3(){
@@ -310,18 +373,24 @@ a3 = '<img src="church.png" style="position: fixed; right: 500px; top: 700px">'
 wood -= 100
 stone -= 50
 gold -= 100
+
+arrow()
+
 }
 }
 function chl3(){
 
-if (wood >= 75){
+if (wood >= 50){
 
 a3 = '<img src="hunter.png" style="position: fixed; right: 500px; top: 700px">'
 g += (0.1*g)
 w += (0.1*w)
 s += (0.1*s)
 i += (0.1*i)
-wood -= 75
+wood -= 50
+
+arrow()
+
 }
 }
 function kop3(){
@@ -333,6 +402,9 @@ i += 0.17
 wood -= 50
 stone -= 50
 gold -= 50
+
+arrow()
+
 }
 }
 function kam3(){
@@ -344,6 +416,8 @@ s += 8.33
 wood -= 100
 gold -= 50
 
+arrow()
+
 }
 }
 
@@ -354,6 +428,9 @@ function dom4(){
 a4 = '<img src="log.png" style="position: fixed; left: 500px; top: 400px">'
 g += 1.33
 wood -= 50
+
+arrow()
+
 }
 }
 function drw4(){
@@ -364,6 +441,9 @@ a4 = '<img src="cabin.png" style="position: fixed; left: 500px; top: 400px">'
 w += 16.7
 wood -= 50
 stone -= 10
+
+arrow()
+
 }
 }
 function kos4(){
@@ -374,18 +454,24 @@ a4 = '<img src="church.png" style="position: fixed; left: 500px; top: 400px">'
 wood -= 100
 stone -= 50
 gold -= 100
+
+arrow()
+
 }
 }
 function chl4(){
 
-if (wood >= 75){
+if (wood >= 50){
 
 a4 = '<img src="hunter.png" style="position: fixed; left: 500px; top: 400px">'
 g += (0.1*g)
 w += (0.1*w)
 s += (0.1*s)
 i += (0.1*i)
-wood -= 75
+wood -= 50
+
+arrow()
+
 }
 }
 function kop4(){
@@ -397,6 +483,9 @@ i += 0.17
 wood -= 50
 stone -= 50
 gold -= 50
+
+arrow()
+
 }
 }
 function kam4(){
@@ -408,6 +497,8 @@ s += 8.33
 wood -= 100
 gold -= 50
 
+arrow()
+
 }
 }
 
@@ -418,6 +509,9 @@ function dom5(){
 a5 = '<img src="log.png" style="position: fixed; right: 0px; top: 600px">'
 g += 1.33
 wood -= 50
+
+arrow()
+
 }
 }
 function drw5(){
@@ -428,8 +522,10 @@ a5 = '<img src="cabin.png" style="position: fixed; right: 0px; top: 600px">'
 w += 16.7
 wood -= 50
 stone -= 10
-}
 
+arrow()
+
+}
 }
 function kos5(){
 
@@ -439,18 +535,24 @@ a5 = '<img src="church.png" style="position: fixed; right: 0px; top: 600px">'
 wood -= 100
 stone -= 50
 gold -= 100
+
+arrow()
+
 }
 }
 function chl5(){
 
-if (wood >= 75){
+if (wood >= 50){
 
 a5 = '<img src="hunter.png" style="position: fixed; right: 0px; top: 600px">'
 g += (0.1*g)
 w += (0.1*w)
 s += (0.1*s)
 i += (0.1*i)
-wood -= 75
+wood -= 50
+
+arrow()
+
 }
 }
 function kop5(){
@@ -462,6 +564,9 @@ i += 0.17
 wood -= 50
 stone -= 50
 gold -= 50
+
+arrow()
+
 }
 }
 function kam5(){
@@ -473,8 +578,104 @@ s += 8.33
 wood -= 100
 gold -= 50
 
+arrow()
+
 }
 }
+
+function dom6(){
+
+if (wood >= 50){
+
+a6 = '<img src="log.png" style="position: fixed; right: 410px; top: 521px">'
+g += 1.33
+wood -= 50
+
+arrow()
+
+}
+}
+function drw6(){
+
+if (wood >= 50 && stone >= 10){
+
+a6 = '<img src="cabin.png" style="position: fixed; right: 410px; top: 521px">'
+w += 16.7
+wood -= 50
+stone -= 10
+
+arrow()
+
+}
+}
+function kos6(){
+
+if (wood >= 100 && stone >= 50 && gold >= 100){
+
+a6 = '<img src="church.png" style="position: fixed; right: 410px; top: 521px">'
+wood -= 100
+stone -= 50
+gold -= 100
+
+arrow()
+
+}
+}
+function chl6(){
+
+if (wood >= 50){
+
+a6 = '<img src="hunter.png" style="position: fixed; right: 410px; top: 521px">'
+g += (0.1*g)
+w += (0.1*w)
+s += (0.1*s)
+i += (0.1*i)
+wood -= 50
+
+arrow()
+
+}
+}
+function kop6(){
+
+if (wood >= 100 && stone >= 50 && gold >= 100){
+
+a6 = '<img src="iron.png" style="position: fixed; right: 410px; top: 521px">'
+i += 0.17
+wood -= 50
+stone -= 50
+gold -= 50
+
+arrow()
+
+}
+}
+function kam6(){
+
+if (wood >= 100 && gold >= 50){
+
+a6 = '<img src="quarry.png" style="position: fixed; right: 410px; top: 521px">'
+s += 8.33
+wood -= 100
+gold -= 50
+
+arrow()
+
+}
+}
+
+
+function ch1(){
+
+const back = document.querySelector("style")
+back.innerHTML= 'body  {background-image: url("tree.jpg");  background-attachment: fixed; background-position: fixed center; background-size: 100%;}'
+
+const vers = document.querySelector('div')
+
+vers.outerHTML = buildch1
+
+}
+
 
 </script>
 </html>
